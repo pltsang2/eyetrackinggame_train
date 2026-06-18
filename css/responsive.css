@@ -1,0 +1,333 @@
+/* Responsive Design */
+
+/* Large Displays (1200px and above) */
+@media (min-width: 1200px) {
+  :root {
+    --font-size-md: 1.1rem;
+    --font-size-lg: 1.4rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.8rem;
+  }
+
+  .menu-screen {
+    padding: var(--spacing-xxl);
+  }
+
+  .webcam-preview-container {
+    max-width: 700px;
+  }
+
+  .settings-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium Displays (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .menu-screen {
+    padding: var(--spacing-xl);
+  }
+
+  .webcam-preview-container {
+    max-width: 500px;
+  }
+
+  .settings-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .menu-buttons {
+    max-width: 280px;
+  }
+
+  .help-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Small Displays (480px to 767px) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-md: 0.95rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --spacing-xxl: 1.5rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .menu-screen {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-lg);
+  }
+
+  .game-title {
+    font-size: var(--font-size-xxl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .webcam-preview-container {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .menu-buttons {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .settings-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .settings-screen {
+    padding: var(--spacing-lg);
+  }
+
+  .settings-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .settings-panel {
+    padding: var(--spacing-md);
+  }
+
+  .settings-panel h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .btn {
+    width: 100%;
+  }
+
+  .final-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .help-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .hud-left,
+  .hud-center,
+  .hud-right {
+    gap: var(--spacing-md);
+  }
+
+  .btn-large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-md);
+    min-height: 48px;
+  }
+}
+
+/* Extra Small Displays (320px to 479px) */
+@media (max-width: 479px) {
+  :root {
+    --font-size-md: 0.875rem;
+    --font-size-lg: 1rem;
+    --font-size-xl: 1.25rem;
+    --font-size-xxl: 1.5rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.5rem;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  .menu-screen {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .game-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .webcam-preview-container {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .preview-label,
+  .preview-status {
+    font-size: 0.75rem;
+    padding: var(--spacing-sm);
+  }
+
+  .menu-buttons {
+    max-width: 100%;
+    gap: var(--spacing-sm);
+  }
+
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-md);
+  }
+
+  .btn-large {
+    padding: var(--spacing-md) var(--spacing-md);
+    font-size: var(--font-size-md);
+    min-height: 44px;
+  }
+
+  .settings-panel {
+    padding: var(--spacing-md);
+  }
+
+  .game-hud,
+  .game-controls {
+    height: 50px;
+  }
+
+  .game-canvas-container {
+    top: 50px;
+    bottom: 50px;
+    height: calc(100% - 100px);
+  }
+
+  .gaze-point-game,
+  .gaze-trail-game {
+    top: 50px;
+    height: calc(100% - 100px);
+  }
+
+  .hud-item {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+  }
+
+  .hud-label {
+    font-size: 0.7rem;
+  }
+
+  .hud-value {
+    font-size: var(--font-size-md);
+  }
+}
+
+/* Landscape Mode (wider than tall) */
+@media (max-aspect-ratio: 1/1) and (max-width: 767px) {
+  .menu-screen {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .menu-header {
+    margin-bottom: 0;
+  }
+
+  .webcam-preview-container {
+    max-width: 400px;
+    max-height: 300px;
+  }
+
+  .menu-buttons {
+    max-width: 150px;
+  }
+
+  .settings-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+/* Portrait Mode (taller than wide) */
+@media (min-aspect-ratio: 1/1) and (max-height: 600px) {
+  .game-hud,
+  .game-controls {
+    height: 50px;
+  }
+
+  .game-canvas-container {
+    top: 50px;
+    bottom: 50px;
+    height: calc(100% - 100px);
+  }
+
+  .hud-item {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .input-select,
+  .input-range {
+    min-height: 48px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .btn,
+  .input-select,
+  .input-range,
+  .input-color {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-bg: #1A1A2E;
+    --border: #404050;
+  }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --dark-bg: #FFFFFF;
+    --text-dark: #1A1A2E;
+    --text-light: #1A1A2E;
+  }
+}
+
+/* Keyboard Navigation Focus States */
+@media (prefers-contrast: more) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .input-select,
+  .input-range,
+  .input-color {
+    border-width: 2px;
+  }
+}
